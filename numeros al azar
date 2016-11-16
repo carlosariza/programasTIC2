@@ -1,0 +1,19 @@
+#include<iostream>
+#include<stdlib.h>
+#include<time.h>
+using namespace std;
+int main(){
+  int cont;
+  int num;
+  int salir;
+  
+  int semilla; //numero entero que relleno con los segundos transcurridos desde una fecha fija
+  semilla=time(0);  //tiempo de referencia
+  srand(semilla);  //enviamos el numero de segundos desde que se encendio la placa base
+  for(cont=0;cont<10;cont++){
+    num=rand()%10+1;  //convertimos numero al azar en numero al azar entre 1 y 10. Y eliminamos el cero
+    cout<<num<<" ";
+  }
+  cin>>salir;
+  return 0;
+}
