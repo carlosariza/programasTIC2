@@ -1,0 +1,21 @@
+//crear una matriz con numeros aleatorios
+#include<iostream>
+#include<stdlib.h>   //fichero de rand
+#include<time.h>   //ficheros relacionados con el tiempo
+using namespace std;
+
+int main(){
+	int fil, col, num;
+	int matrix[3][3];   //definimos la variable como una matriz 3x3
+	srand(time(0));  //establecemos el tiempo a 0
+
+	for(fil=0;fil<3;fil++){    //leemos las filas
+		for(col=0;col<3;col++){    //leemos las columnas
+			num=rand()%2;  //el numero aleatorio se divide entre 2 y se toma el resto
+			cout<<num<<" ";
+			matrix[fil][col]=num;
+		}
+		cout<<"\n";  //aplicamos un salto de carro para que tenga forma de matriz
+	}
+	return 0;
+}
