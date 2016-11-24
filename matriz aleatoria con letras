@@ -1,0 +1,20 @@
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+using namespace std;
+int main(){
+    int fil,col;
+    char matrix[3][3]; 
+    char num; 
+    srand(time(0));
+    for(fil=0;fil<3;fil++){ //Este "for" te muestra en pantalla la matriz aleatoria
+    	for(col=0;col<3;col++){     
+      		num = rand()%3 + 65; //El numero aleatorio se divide entre 3 y muestra el resto. 
+			                     //El 65 es la letra «A» en código ascii
+      		cout << num << " ";
+      matrix [fil][col] = num;
+    }
+    cout << "\n";
+  }
+  return 0;
+}
