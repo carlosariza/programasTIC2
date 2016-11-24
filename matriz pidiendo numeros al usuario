@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int fil, col;
+	int matrix[3][3];
+	for(fil=0;fil<3;fil++){  //primer for sirve para pedir al usuario los valores de los elementos
+		for(col=0;col<3;col++){
+			cout<<"elemento "<<fil<<","<<col<<endl;
+			cin>>matrix[fil][col];
+		}
+	}
+	for(fil=0;fil<3;fil++){  //segundo for sirve para mostrar la matriz
+		for(col=0;col<3;col++){
+			cout<<matrix[fil][col];
+		}
+		cout<<"\n";
+	}
+return 0;
+}
